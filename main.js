@@ -7,11 +7,12 @@
 // The adapter-core module gives you access to the core ioBroker functions
 // you need to create an adapter
 const utils = require("@iobroker/adapter-core");
-const connect = require('connect')
-const compression = require('compression')
-const serveStatic = require('serve-static')
-const serveIndex = require('serve-index')
-const fs = require('fs')
+const connect = require('connect');
+const compression = require('compression');
+const serveStatic = require('serve-static');
+const serveIndex = require('serve-index');
+const fs = require('fs');
+const path = require('path');
 
 
 // Load your modules here, e.g.:
@@ -22,7 +23,10 @@ const fs = require('fs')
  * @type {ioBroker.Adapter}
  */
 let adapter;
-let server    = null;
+let server;
+let dataDir;
+let bind ;
+let port;
 
 /**
  * Starts the adapter instance
@@ -30,6 +34,8 @@ let server    = null;
  */
 function startAdapter(options) {
 	// Create the adapter and define its methods
+	dataDir = path.normalize(path.join(utils.controllerDir, require(path.join(utils.controllerDir, 'lib', 'tools.js')).getDefaultDataDir()));
+
 	return adapter = utils.adapter(Object.assign({}, options, {
 		name: "serve",
 
@@ -78,14 +84,20 @@ function main() {
 	// adapter.config:
 	adapter.log.info("config bind: " + adapter.config.bind);
 	adapter.log.info("config port: " + adapter.config.port);
+	bind = adapter.config.bind;
+	port = adapter.config.port;
 
-	
-	
+	serve()
 }
 
 function serve() {
 	// path
-	let path = "";
+	let path = dataDir + "/" + 'serve';
+
+	if (!fs.existsSync(path) ) {
+		fs.mkdirSync(path)
+	}
+
 	// setup the server
 	server = connect();
 
@@ -108,7 +120,7 @@ function serve() {
 	  , icons: true
 	}));
 
-	launch(3000)
+	launch(port)
 }
 
 function onError (err) {
@@ -124,7 +136,7 @@ function onError (err) {
 
 
 function launch (port) {
-	return server.listen(port, function () {
+	return server.listen(port, !bind || bind == "0.0.0.0" ? undefined : bind || undefined ,function () {
 	  // Successful message
 	  adapter.log.error(`Serving  on port ${port} .`);
 	  // open the browser window to this server
