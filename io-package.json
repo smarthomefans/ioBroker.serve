@@ -18,28 +18,28 @@
 		},
 		"title": "file serve",
 		"titleLang": {
-			"en": "file serve",
-			"de": "Datei dienen",
-			"ru": "подача файлов",
-			"pt": "arquivo de saque",
-			"nl": "bestand serveren",
-			"fr": "fichier servir",
-			"it": "file serve",
-			"es": "servicio de archivo",
-			"pl": "plik służyć",
-			"zh-cn": "文件服务"
+			"en": "static file serve",
+			"de": "statische Datei dienen",
+			"ru": "подача статического файла",
+			"pt": "serviço de arquivo estático",
+			"nl": "statische bestandsservices",
+			"fr": "fichier statique servir",
+			"it": "servire file statici",
+			"es": "servicio de archivo estático",
+			"pl": "statyczny plik obsługi",
+			"zh-cn": "静态文件服务"
 		},
 		"desc": {
-			"en": "serve",
-			"de": "Dienen",
-			"ru": "обслуживать",
-			"pt": "servir",
-			"nl": "dienen",
-			"fr": "servir",
-			"it": "servire",
-			"es": "servir",
-			"pl": "obsługiwać",
-			"zh-cn": "服务"
+			"en": "static file serve",
+			"de": "statische Datei dienen",
+			"ru": "подача статического файла",
+			"pt": "serviço de arquivo estático",
+			"nl": "statische bestandsservices",
+			"fr": "fichier statique servir",
+			"it": "servire file statici",
+			"es": "servicio de archivo estático",
+			"pl": "statyczny plik obsługi",
+			"zh-cn": "静态文件服务"
 		},
 		"authors": [
 			"yaming116 <yaming1106@gmail.com>"
@@ -72,6 +72,7 @@
 		]
 	},
 	"native": {
+		"bind": "0.0.0.0",
 		"port": 8083
 	},
 	"objects": [],

@@ -6,6 +6,8 @@
 
 // The adapter-core module gives you access to the core ioBroker functions
 // you need to create an adapter
+// copy from https://github.com/tj/serve/blob/master/bin/serve
+//
 const utils = require("@iobroker/adapter-core");
 const connect = require('connect');
 const compression = require('compression');
@@ -14,9 +16,6 @@ const serveIndex = require('serve-index');
 const fs = require('fs');
 const path = require('path');
 
-
-// Load your modules here, e.g.:
-// const fs = require("fs");
 
 /**
  * The adapter instance
@@ -92,7 +91,7 @@ function main() {
 
 function serve() {
 	// path
-	let path = dataDir + "/" + 'serve';
+	let path = dataDir + "/" + adapter.namespace.replace('.', '_');
 
 	if (!fs.existsSync(path) ) {
 		fs.mkdirSync(path)
@@ -138,7 +137,7 @@ function onError (err) {
 function launch (port) {
 	return server.listen(port, !bind || bind == "0.0.0.0" ? undefined : bind || undefined ,function () {
 	  // Successful message
-	  adapter.log.error(`Serving  on port ${port} .`);
+	  adapter.log.info(`Serving  on port ${port} .`);
 	  // open the browser window to this server
 	}).on('error', onError);
 }
