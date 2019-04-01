@@ -5,12 +5,12 @@
 
 [![NPM version](http://img.shields.io/npm/v/iobroker.serve.svg)](https://www.npmjs.com/package/iobroker.serve)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.serve.svg)](https://www.npmjs.com/package/iobroker.serve)
-[![Dependency Status](https://img.shields.io/david/smarthomefans/iobroker.serve.svg)](https://david-dm.org/yaming116/iobroker.serve)
+[![Dependency Status](https://img.shields.io/david/smarthomefans/iobroker.serve.svg)](https://david-dm.org/smarthomefans/iobroker.serve)
 [![Known Vulnerabilities](https://snyk.io/test/github/smarthomefans/ioBroker.serve/badge.svg)](https://snyk.io/test/github/smarthomefans/ioBroker.serve)
 
 [![NPM](https://nodei.co/npm/iobroker.serve.png?downloads=true)](https://nodei.co/npm/iobroker.serve/)
 
-**Tests:** Linux/Mac: [![Travis-CI](http://img.shields.io/travis/smarthomefans/ioBroker.serve/master.svg)](https://travis-ci.org/yaming116/ioBroker.serve)
+**Tests:** Linux/Mac: [![Travis-CI](http://img.shields.io/travis/smarthomefans/ioBroker.serve/master.svg)](https://travis-ci.org/smarthomefans/ioBroker.serve)
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/smarthomefans/ioBroker.serve?branch=master&svg=true)](https://ci.appveyor.com/project/smarthomefans/ioBroker-serve/)
 
 ## serve adapter for ioBroker
