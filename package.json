@@ -1,7 +1,7 @@
 {
   "name": "iobroker.serve",
   "version": "0.0.1",
-  "description": "serve",
+  "description": "iobroker static file server",
   "author": {
     "name": "yaming116",
     "email": "yaming1106@gmail.com"
