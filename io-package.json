@@ -1,8 +1,20 @@
 {
 	"common": {
 		"name": "serve",
-		"version": "0.0.1",
+		"version": "0.1.1",
 		"news": {
+			"0.1.1": {
+				"en": "Fix travis-ci broken problem ,use the new logo",
+				"ru": "TR: Fix travis-ci broken problem ,use the new logo",
+				"de": "TR: Fix travis-ci broken problem ,use the new logo",
+				"it": "TR: Fix travis-ci broken problem ,use the new logo",
+				"nl": "TR: Fix travis-ci broken problem ,use the new logo",
+				"fr": "TR: Fix travis-ci broken problem ,use the new logo",
+				"es": "TR: Fix travis-ci broken problem ,use the new logo",
+				"pl": "TR: Fix travis-ci broken problem ,use the new logo",
+				"zh-cn": "TR: Fix travis-ci broken problem ,use the new logo",
+				"pt": "修复travis-ci broken 问题,使用新的logo"
+			},
 			"0.0.1": {
 				"en": "initial release",
 				"de": "Erstveröffentlichung",
@@ -55,8 +67,8 @@
 		"main": "main.js",
 		"icon": "serve.png",
 		"enabled": true,
-		"extIcon": "https://raw.githubusercontent.com/yaming116/ioBroker.serve/master/admin/serve.png",
-		"readme": "https://github.com/yaming116/ioBroker.serve/blob/master/README.md",
+		"extIcon": "https://raw.githubusercontent.com/smarthomefans/ioBroker.serve/master/admin/serve.png",
+		"readme": "https://github.com/smarthomefans/ioBroker.serve/blob/master/README.md",
 		"loglevel": "info",
 		"mode": "daemon",
 		"type": "network",
