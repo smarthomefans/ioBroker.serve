@@ -33,7 +33,7 @@ let port;
  */
 function startAdapter(options) {
 	// Create the adapter and define its methods
-	dataDir = path.normalize(path.join(utils.controllerDir, require(path.join(utils.controllerDir, 'lib', 'tools.js')).getDefaultDataDir()));
+	dataDir = path.normalize(utils.controllerDir + '/iobroker-data/')
 
 	return adapter = utils.adapter(Object.assign({}, options, {
 		name: "serve",
@@ -92,10 +92,12 @@ function main() {
 function serve() {
 	// path
 	let path = dataDir + "/" + adapter.namespace.replace('.', '_');
-
-	if (!fs.existsSync(path) ) {
-		fs.mkdirSync(path)
+	try {
+		if (!fs.existsSync(path) ) {
+			fs.mkdirSync(path)
+		}
 	}
+	catch ( /* not found */_a) { /* not found */ }
 
 	// setup the server
 	server = connect();
