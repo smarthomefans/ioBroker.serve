@@ -1,6 +1,5 @@
 os:
   - linux
-  - osx
   - windows
 
 language: node_js
@@ -8,6 +7,7 @@ node_js:
   - '6'
   - '8'
   - '10'
+  - '12'
 
 env:
   - CXX=g++-4.8
@@ -17,6 +17,8 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - g++-4.9
+      - libxtst-dev
+      - libpng++-dev
 
 before_install:
   - 'if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then CC=gcc-4.9; fi'
