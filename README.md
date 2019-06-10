@@ -19,6 +19,11 @@ Describe your project here
 
 ## Changelog
 
+### 0.1.1
+* (yaming116) 修复travis-ci broken 问题
+* (yaming116) 使用新的logo
+
+
 ### 0.0.1
 * (yaming116) initial release
 
