@@ -33,7 +33,7 @@ let port;
  */
 function startAdapter(options) {
 	// Create the adapter and define its methods
-	dataDir = path.normalize(utils.controllerDir + '../../iobroker-data')
+	dataDir = path.normalize(utils.controllerDir + '/../../iobroker-data')
 
 	return adapter = utils.adapter(Object.assign({}, options, {
 		name: "serve",
