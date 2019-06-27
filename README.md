@@ -15,7 +15,7 @@ Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/smartho
 
 ## serve adapter for ioBroker
 
-Describe your project here
+Assuming you would like to serve a static site, single page application or just a static file (no matter if on your device or on the local network), this package is just the right choice for you.
 
 ## Changelog
 
